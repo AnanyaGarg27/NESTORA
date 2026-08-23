@@ -1,0 +1,81 @@
+.explore-page {
+  width: 88%;
+  margin: 100px auto;
+}
+
+.explore-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.explore-heading p:first-child {
+  color: #8064d8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.explore-heading h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  color: #29252d;
+  margin: 0 0 12px;
+  text-transform: capitalize;
+}
+
+.explore-heading h1 span {
+  color: #8064d8;
+}
+
+.explore-heading p:last-child {
+  color: #777;
+  font-size: 14px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.explore-card {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ddd;
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.explore-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-heading h1 {
+    font-size: 30px;
+  }
+}
