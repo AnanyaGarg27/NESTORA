@@ -1,0 +1,291 @@
+.features-page {
+  width: 100%;
+  padding: 90px 7%;
+  background: #f8f6f2;
+}
+
+.features-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.features-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.features-header h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.features-header p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FEATURE CONTAINER
+========================= */
+
+.features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================
+   FEATURE CARD
+========================= */
+
+.feature-card {
+  position: relative;
+  min-height: 440px;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-end;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.feature-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.82),
+      rgba(0, 0, 0, 0.30),
+      rgba(0, 0, 0, 0.05)
+    );
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.feature-content {
+  position: relative;
+  z-index: 2;
+
+  padding: 30px;
+
+  color: white;
+}
+
+.feature-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.feature-content h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.feature-content p {
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================
+   PREMIUM LABEL
+========================= */
+
+.premium-label {
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(8px);
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.feature-content button {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: white;
+  color: #333;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.feature-content button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .features-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .features-header h1 {
+    font-size: 36px;
+  }
+
+}
+/* =====================================
+   PREMIUM ACTION
+===================================== */
+
+.premium-action {
+    text-align: center;
+    margin-top: 55px;
+    padding-bottom: 20px;
+}
+
+.premium-action p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #666;
+}
+
+
+/* =====================================
+   MAIN PREMIUM BUTTON
+===================================== */
+
+.main-premium-btn {
+    border: none;
+    padding: 15px 34px;
+    border-radius: 30px;
+
+    background: #222;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-premium-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================
+   OPEN FEATURE BUTTON
+===================================== */
+
+.feature-open-btn {
+    width: 100%;
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 12px;
+
+    background: white;
+    color: #222;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.feature-open-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   PREMIUM ACTIVE
+===================================== */
+
+.premium-active {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    background: #222;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
