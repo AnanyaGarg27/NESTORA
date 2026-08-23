@@ -1,0 +1,306 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 620px;
+    padding: 70px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background: #faf9fc;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+    width: 48%;
+}
+
+.hero-tag {
+    color: #6242d6;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 58px;
+    line-height: 1.1;
+
+    color: #29222f;
+
+    margin: 0 0 25px;
+}
+
+.hero-content h1 span {
+    color: #6242d6;
+}
+
+
+/* Description */
+
+.hero-description {
+    max-width: 520px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* Common button styling */
+
+.start-designing,
+.explore-rooms {
+    text-decoration: none;
+
+    position: relative;
+    z-index: 101;
+
+    pointer-events: auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Start Designing */
+
+.start-designing {
+    background: #6242d6;
+
+    color: white;
+
+    border: 1px solid #6242d6;
+
+    box-shadow:
+        0 8px 20px rgba(98, 66, 214, 0.20);
+}
+
+
+.start-designing:hover {
+    background: #5234c4;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(98, 66, 214, 0.30);
+}
+
+
+/* Explore Rooms */
+
+.explore-rooms {
+    background: white;
+
+    color: #29222f;
+
+    border: 1px solid #ddd;
+}
+
+
+.explore-rooms:hover {
+    color: #6242d6;
+
+    border-color: #6242d6;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.hero-image-container {
+    width: 48%;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.hero-image {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   FLOATING CARD
+========================= */
+
+.hero-floating-card {
+    position: absolute;
+
+    left: -25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15);
+
+    z-index: 5;
+}
+
+
+.floating-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #6242d6;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+
+.hero-floating-card strong {
+    display: block;
+
+    color: #29222f;
+
+    font-size: 14px;
+}
+
+
+.hero-floating-card p {
+    margin: 4px 0 0;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        padding: 50px 6%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .start-designing,
+    .explore-rooms {
+        width: auto;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .hero-floating-card {
+        left: 10px;
+        bottom: 15px;
+    }
+}
