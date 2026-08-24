@@ -1,0 +1,250 @@
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+  width: 88%;
+
+  margin: 80px auto;
+
+  padding: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  background: #f4eee5;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.cta-content {
+  width: 48%;
+}
+
+.cta-label {
+  color: #b08a32;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
+}
+
+.cta-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  color: #29252d;
+
+  margin: 0;
+}
+
+.cta-content h2 span {
+  color: #8064d8;
+
+  font-style: italic;
+}
+
+
+/* Description */
+
+.cta-description {
+  max-width: 420px;
+
+  color: #888;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin: 20px 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.cta-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #29252d;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.cta-button span {
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #8064d8;
+
+  transform: translateY(-3px);
+}
+
+.cta-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.cta-image {
+  width: 45%;
+
+  height: 320px;
+
+  position: relative;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.cta-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.6s ease;
+}
+
+.cta-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   IMAGE TEXT
+========================= */
+
+.cta-image-text {
+  position: absolute;
+
+  bottom: 18px;
+
+  left: 18px;
+
+  padding: 12px 15px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 10px;
+}
+
+.cta-image-text span {
+  color: #b08a32;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.cta-image-text p {
+  margin: 4px 0 0;
+
+  color: #29252d;
+
+  font-family: Georgia, serif;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .cta-section {
+    flex-direction: column;
+
+    padding: 35px;
+
+    align-items: flex-start;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-image {
+    width: 100%;
+
+    height: 300px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .cta-section {
+    width: 90%;
+
+    padding: 25px;
+
+    margin: 60px auto;
+  }
+
+  .cta-content h2 {
+    font-size: 30px;
+  }
+
+  .cta-image {
+    height: 250px;
+  }
+
+}
