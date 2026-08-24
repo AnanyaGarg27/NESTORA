@@ -1,0 +1,235 @@
+/* Dark Blur Background Overlay */
+.popup-3d-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  perspective: 1200px; /* Enables 3D Space */
+  animation: fadeInOverlay 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3D Card Animation */
+.popup-3d-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f7ff 100%);
+  width: 90%;
+  max-width: 480px;
+  padding: 40px 32px;
+  border-radius: 24px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 30px 60px -12px rgba(99, 91, 255, 0.35),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  
+  /* Initial 3D Tilt State */
+  transform-style: preserve-3d;
+  transform: rotateX(25deg) rotateY(-10deg) scale(0.85) translateZ(-100px);
+  animation: popup3DEntry 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Smooth 3D Entrance Effect */
+@keyframes popup3DEntry {
+  to {
+    transform: rotateX(0deg) rotateY(0deg) scale(1) translateZ(0);
+  }
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Close Button */
+.popup-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f3f4f6;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popup-close-btn:hover {
+  background: #635bff;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* Header Section */
+.popup-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pro-badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #635bff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.popup-header h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.popup-header p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Switch */
+.popup-billing-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.popup-billing-switch span.active {
+  color: #111827;
+}
+
+.switch-track {
+  width: 44px;
+  height: 24px;
+  background: #d1d5db;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  transition: background 0.2s ease;
+}
+
+.switch-track.annual {
+  background: #635bff;
+}
+
+.switch-thumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.switch-track.annual .switch-thumb {
+  transform: translateX(20px);
+}
+
+.discount-tag {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+/* Plan Card Inner Box */
+.popup-plan-box {
+  background: #ffffff;
+  border: 2px solid #635bff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(99, 91, 255, 0.08);
+}
+
+.plan-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.plan-details h3 {
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.price-tag {
+  display: flex;
+  align-items: baseline;
+}
+
+.price-tag .currency {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price-tag .price-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #635bff;
+}
+
+.price-tag .per-month {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Feature List */
+.popup-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.popup-feature-list li {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-feature-list .check {
+  color: #635bff;
+  font-weight: 800;
+}
+
+/* CTA Button */
+.popup-cta-btn {
+  width: 100%;
+  background: #635bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.popup-cta-btn:hover {
+  background: #5046e5;
+  transform: translateY(-2px);
+}
