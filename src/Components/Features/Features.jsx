@@ -17,27 +17,27 @@ const Features = () => {
   );
 
 
-  // =====================================
+
   // OPEN PREMIUM POPUP
-  // =====================================
+ 
 
   const openPremium = () => {
     setShowPremium(true);
   };
 
 
-  // =====================================
+  
   // CLOSE PREMIUM POPUP
-  // =====================================
+
 
   const closePremium = () => {
     setShowPremium(false);
   };
 
 
-  // =====================================
+ 
   // AFTER PREMIUM PURCHASE
-  // =====================================
+ 
 
   const handlePremiumSuccess = () => {
 
@@ -52,9 +52,9 @@ const Features = () => {
   };
 
 
-  // =====================================
+
   // OPEN FEATURE
-  // =====================================
+ 
 
   const handleFeatureClick = (feature) => {
 
@@ -86,9 +86,8 @@ const Features = () => {
     <>
       <section className="features-page">
 
-        {/* =================================
-            HEADER
-        ================================= */}
+        {/*  HEADER */}
+           
 
         <div className="features-header">
 
@@ -108,16 +107,16 @@ const Features = () => {
         </div>
 
 
-        {/* =================================
+        {/* 
             FEATURE CARDS
-        ================================= */}
+         */}
 
         <div className="features-container">
 
 
-          {/* =================================
+          {/* 
               AI DESIGN ASSISTANT
-          ================================= */}
+           */}
 
           <div
             className="feature-card"
@@ -165,9 +164,9 @@ const Features = () => {
           </div>
 
 
-          {/* =================================
+          {/* 
               SMART BUDGET PLANNER
-          ================================= */}
+           */}
 
           <div
             className="feature-card"
@@ -215,9 +214,9 @@ const Features = () => {
           </div>
 
 
-          {/* =================================
+          {/* 
               AI COLOUR SUGGESTIONS
-          ================================= */}
+          */}
 
           <div
             className="feature-card"
@@ -267,9 +266,9 @@ const Features = () => {
         </div>
 
 
-        {/* =================================
+        {/* 
             ONE PREMIUM BUTTON
-        ================================= */}
+         */}
 
         <div className="premium-action">
 
@@ -304,9 +303,9 @@ const Features = () => {
       </section>
 
 
-      {/* =================================
+      {/* 
           PREMIUM POPUP
-      ================================= */}
+      */}
 
       <Premiumpage
         isVisible={showPremium}
