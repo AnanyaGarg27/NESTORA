@@ -1,6 +1,4 @@
-/* =========================
-   PAGE
-========================= */
+/* PAGE*/
 
 .preferences-page {
   min-height: 100vh;
@@ -11,9 +9,7 @@
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/*HEADER */
 
 .preferences-header {
   padding: 75px 7% 45px;
@@ -70,9 +66,7 @@
 }
 
 
-/* =========================
-   MAIN SECTION
-========================= */
+/*MAIN SECTION*/
 
 .preferences-section {
   padding: 25px 7% 90px;
@@ -96,9 +90,7 @@
 }
 
 
-/* =========================
-   GROUP
-========================= */
+/*GROUP*/
 
 .preference-group {
   padding: 8px 0 28px;
@@ -157,9 +149,7 @@
 }
 
 
-/* =========================
-   OPTIONS
-========================= */
+/* OPTIONS*/
 
 .preference-options {
   display: flex;
@@ -234,9 +224,7 @@
 }
 
 
-/* =========================
-   DIVIDER
-========================= */
+/* DIVIDER */
 
 .preference-divider {
   height: 1px;
@@ -247,9 +235,7 @@
 }
 
 
-/* =========================
-   SAVE AREA
-========================= */
+/* SAVE AREA*/
 
 .preferences-save-area {
   margin-top: 30px;
@@ -322,9 +308,7 @@
 
   box-shadow: 0 7px 18px rgba(103, 65, 229, 0.2);
 }
-/* =========================
-   PREFERENCE BUTTONS
-========================= */
+/*PREFERENCE BUTTONS*/
 
 .preferences-buttons {
   display: flex;
@@ -353,9 +337,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*RESPONSIVE*/
 
 @media (max-width: 800px) {
 
