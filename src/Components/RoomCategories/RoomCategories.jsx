@@ -69,15 +69,7 @@ function RoomCategories() {
               alt={room.name}
             />
 
-            {/* <div className="room-overlay">
-
-              <h3>{room.name}</h3>
-
-              <span>
-                Explore →
-              </span>
-
-            </div> */}
+            
             <div className="room-overlay">
 
               <h3>{room.name}</h3>
