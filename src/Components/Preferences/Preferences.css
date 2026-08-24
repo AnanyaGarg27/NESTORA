@@ -1,0 +1,418 @@
+/* =========================
+   PAGE
+========================= */
+
+.preferences-page {
+  min-height: 100vh;
+
+  background: #faf9fd;
+
+  color: #27212f;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.preferences-header {
+  padding: 75px 7% 45px;
+
+  text-align: center;
+}
+
+.preferences-heading {
+  max-width: 760px;
+
+  margin: auto;
+}
+
+.preferences-overline {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #6741e5;
+}
+
+.preferences-heading h1 {
+  margin: 0 0 18px;
+
+  font-size: 48px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #27212f;
+}
+
+.preferences-heading h1 span {
+  color: #6741e5;
+}
+
+.preferences-heading > p {
+  max-width: 650px;
+
+  margin: auto;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #686270;
+}
+
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.preferences-section {
+  padding: 25px 7% 90px;
+}
+
+.preferences-card {
+  max-width: 980px;
+
+  margin: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e3ff;
+
+  border-radius: 22px;
+
+  padding: 45px 50px;
+
+  box-shadow:
+    0 8px 30px rgba(44, 32, 70, 0.05);
+}
+
+
+/* =========================
+   GROUP
+========================= */
+
+.preference-group {
+  padding: 8px 0 28px;
+}
+
+.preference-title {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.preference-number {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 9px;
+
+  background: #f1eeff;
+
+  color: #6741e5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.preference-title h2 {
+  margin: 0 0 5px;
+
+  font-size: 18px;
+
+  font-weight: 650;
+
+  color: #27212f;
+}
+
+.preference-title p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #77717e;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.preference-options {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  padding-left: 52px;
+}
+
+.preference-option {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 17px;
+
+  border: 1px solid #ded9e7;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #5e5867;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.preference-option:hover {
+  border-color: #9a84ed;
+
+  color: #6741e5;
+
+  transform: translateY(-1px);
+}
+
+
+/* SELECTED */
+
+.preference-option.selected {
+  background: #6741e5;
+
+  border-color: #6741e5;
+
+  color: #ffffff;
+
+  box-shadow: 0 5px 14px rgba(103, 65, 229, 0.18);
+}
+
+
+/* CHECK */
+
+.check {
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.preference-divider {
+  height: 1px;
+
+  background: #eeeaf4;
+
+  margin: 5px 0 25px;
+}
+
+
+/* =========================
+   SAVE AREA
+========================= */
+
+.preferences-save-area {
+  margin-top: 30px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #eeeaf4;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.preferences-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.preferences-note span {
+  color: #6741e5;
+
+  font-size: 15px;
+}
+
+.preferences-note p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #77717e;
+}
+
+.save-preferences {
+  border: none;
+
+  padding: 13px 22px;
+
+  border-radius: 9px;
+
+  background: #6741e5;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.save-preferences:hover {
+  background: #5633d1;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(103, 65, 229, 0.2);
+}
+/* =========================
+   PREFERENCE BUTTONS
+========================= */
+
+.preferences-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clear-preferences {
+  border: 1px solid #ded9e7;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #5e5867;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.clear-preferences:hover {
+  border-color: #6741e5;
+  color: #6741e5;
+  background: #f8f6ff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .preferences-heading h1 {
+    font-size: 40px;
+  }
+
+  .preferences-card {
+    padding: 35px 25px;
+  }
+
+  .preference-options {
+    padding-left: 0;
+  }
+
+  .preferences-save-area {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .save-preferences,.save-preferences {
+    
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .preferences-header {
+    padding-top: 50px;
+  }
+
+  .preferences-heading h1 {
+    font-size: 32px;
+  }
+
+  .preferences-heading > p {
+    font-size: 14px;
+  }
+
+  .preference-title {
+    gap: 12px;
+  }
+
+  .preference-title h2 {
+    font-size: 16px;
+  }
+
+  .preference-options {
+    gap: 8px;
+  }
+
+  .preference-option {
+    font-size: 13px;
+
+    padding: 10px 13px;
+  }
+}
