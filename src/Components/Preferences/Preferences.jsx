@@ -315,60 +315,7 @@ function Preferences() {
           </div>
 
 
-          {/* SAVE AREA */}
-
-          {/* <div className="preferences-save-area">
-
-            <div className="preferences-note">
-              <span>✦</span>
-
-              <p>
-                Your choices are saved on this device and can
-                be changed anytime.
-              </p>
-            </div>
-
-
-            <button
-              className="save-preferences"
-              onClick={savePreferences}
-            >
-              {saved ? "Preferences Saved ✓" : "Save Preferences →"}
-            </button>
-
-          </div> */}
-
-          {/* <div className="preferences-save-area">
-
-            <div className="preferences-note">
-              <span>✦</span>
-
-              <p>
-                Your choices are saved on this device and can
-                be changed anytime.
-              </p>
-            </div>
-
-            <div className="preferences-buttons">
-
-              <button
-                className="clear-preferences"
-                onClick={clearPreferences}
-              >
-                Clear Preferences
-              </button>
-
-              <button
-                className="save-preferences"
-                onClick={savePreferences}
-              >
-                {saved ? "Preferences Saved ✓" : "Save Preferences →"}
-              </button>
-
-            </div>
-
-          </div> */}
-          {/* SAVE AREA */}
+          
 
           <div className="preferences-save-area">
 
