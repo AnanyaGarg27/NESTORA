@@ -4,9 +4,9 @@ import "./Gallery.css";
 
 function Gallery() {
 
-    // =========================
+    
     // SAVED PREFERENCES
-    // =========================
+    
 
     const [preferences] = useState(() => {
 
@@ -19,9 +19,9 @@ function Gallery() {
     });
 
 
-    // =========================
+    
     // SELECTED ROOM CATEGORY
-    // =========================
+    
 
     const [selectedCategory, setSelectedCategory] = useState(() => {
 
@@ -40,9 +40,9 @@ function Gallery() {
     });
 
 
-    // =========================
+
     // SEARCH
-    // =========================
+    
 
     const [search, setSearch] = useState("");
 
@@ -65,9 +65,9 @@ function Gallery() {
     const [showFavorites, setShowFavorites] = useState(false);
 
 
-    // =========================
+    
     // SAVE FAVORITES
-    // =========================
+    
 
     useEffect(() => {
 
@@ -79,9 +79,9 @@ function Gallery() {
     }, [favorites]);
 
 
-    // =========================
+    
     // GALLERY DESIGNS
-    // =========================
+    
 
     const designs = [
 
@@ -168,9 +168,9 @@ function Gallery() {
     ];
 
 
-    // =========================
+    
     // TOGGLE FAVORITE
-    // =========================
+    
 
     const toggleFavorite = (id) => {
 
@@ -194,9 +194,9 @@ function Gallery() {
     };
 
 
-    // =========================
+    
     // STYLE MATCHING
-    // =========================
+    
 
     const styleMatches = (
         designStyle,
@@ -250,9 +250,9 @@ function Gallery() {
     };
 
 
-    // =========================
+    
     // COLOR MATCHING
-    // =========================
+    
 
     const colorMatches = (
         designColors,
@@ -356,25 +356,25 @@ function Gallery() {
     };
 
 
-    // =========================
+    
     // FILTER DESIGNS
-    // =========================
+    
 
     const filteredDesigns = designs
         .filter((design) => {
 
-            // =========================
+            
             // ROOM FILTER
-            // =========================
+            
 
             const categoryMatch =
                 selectedCategory === "All" ||
                 design.room === selectedCategory;
 
 
-            // =========================
+            
             // SEARCH FILTER
-            // =========================
+            
 
             const searchMatch =
                 design.title
@@ -390,9 +390,9 @@ function Gallery() {
                     .includes(search.toLowerCase());
 
 
-            // =========================
+            
             // FAVORITES FILTER
-            // =========================
+            
 
             const favoriteMatch =
                 !showFavorites ||
@@ -407,9 +407,9 @@ function Gallery() {
 
         })
 
-        // =========================
+        
         // SORT BY SAVED PREFERENCES
-        // =========================
+        
 
         .sort((a, b) => {
 
@@ -421,9 +421,9 @@ function Gallery() {
             let scoreB = 0;
 
 
-            // =========================
+            
             // STYLE SCORE
-            // =========================
+        
 
             if (
                 styleMatches(
@@ -444,9 +444,9 @@ function Gallery() {
             }
 
 
-            // =========================
+            
             // COLOR SCORE
-            // =========================
+            
 
             if (
                 colorMatches(
@@ -471,18 +471,18 @@ function Gallery() {
         });
 
 
-    // =========================
+    
     // PAGE
-    // =========================
+    
 
     return (
 
         <div className="gallery-page">
 
 
-            {/* =========================
+            {/* 
                 HERO / HEADER
-            ========================= */}
+            */}
 
             <section className="gallery-header">
 
@@ -507,9 +507,9 @@ function Gallery() {
             </section>
 
 
-            {/* =========================
+            {/* 
                 SEARCH
-            ========================= */}
+             */}
 
             <div className="gallery-search">
 
@@ -530,9 +530,9 @@ function Gallery() {
             </div>
 
 
-            {/* =========================
+            {/* 
                 FILTERS
-            ========================= */}
+        */}
 
             <div className="gallery-filters">
 
@@ -589,9 +589,9 @@ function Gallery() {
             </div>
 
 
-            {/* =========================
+            {/* 
                 DESIGN GRID
-            ========================= */}
+             */}
 
             <section className="gallery-grid">
 
