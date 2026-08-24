@@ -1,6 +1,4 @@
-/* =========================
-   ROOM CATEGORIES
-========================= */
+/*ROOM CATEGORIES*/
 
 .room-categories {
   width: 88%;
@@ -8,9 +6,7 @@
 }
 
 
-/* =========================
-   HEADING
-========================= */
+/*HEADING*/
 
 .room-heading {
   text-align: center;
@@ -55,9 +51,7 @@
 }
 
 
-/* =========================
-   ROOM GRID
-========================= */
+/*ROOM GRID*/
 
 .room-grid {
   display: grid;
@@ -68,9 +62,7 @@
 }
 
 
-/* =========================
-   ROOM CARD
-========================= */
+/*ROOM CARD*/
 
 .room-card {
   height: 260px;
@@ -125,9 +117,7 @@
 }
 
 
-/* =========================
-   ROOM TEXT
-========================= */
+/* ROOM TEXT */
 
 .room-overlay {
   position: absolute;
@@ -168,9 +158,7 @@
 }
 
 
-/* =========================
-   HOVER
-========================= */
+/*HOVER */
 
 .room-card:hover {
   transform: translateY(-7px);
@@ -190,9 +178,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*RESPONSIVE*/
 
 @media (max-width: 900px) {
 
