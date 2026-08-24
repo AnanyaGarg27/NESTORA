@@ -1,6 +1,4 @@
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO SECTION*/
 
 .hero {
     min-height: 620px;
@@ -16,9 +14,7 @@
 }
 
 
-/* =========================
-   LEFT CONTENT
-========================= */
+/* LEFT CONTENT */
 
 .hero-content {
     width: 48%;
@@ -66,9 +62,7 @@
 }
 
 
-/* =========================
-   HERO BUTTONS
-========================= */
+/*  HERO BUTTONS */
 
 .hero-buttons {
     display: flex;
@@ -151,9 +145,7 @@
 }
 
 
-/* =========================
-   RIGHT IMAGE
-========================= */
+/* RIGHT IMAGE */
 
 .hero-image-container {
     width: 48%;
@@ -180,9 +172,7 @@
 }
 
 
-/* =========================
-   FLOATING CARD
-========================= */
+/* FLOATING CARD */
 
 .hero-floating-card {
     position: absolute;
@@ -244,9 +234,7 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
 
