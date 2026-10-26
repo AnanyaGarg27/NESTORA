@@ -1,369 +1,578 @@
-/* ==============================
-   PAGE
-============================== */
+* { box-sizing: border-box; }
 
 .designer-page {
   min-height: 100vh;
-  background: #f5f3ef;
-  color: #202536;
+  background: #f8f5f0;
+  color: #302b32;
+  font-family: Arial, sans-serif;
 }
 
-
-/* ==============================
-   HEADER
-============================== */
-
-.designer-header {
-  height: 70px;
-
-  background: white;
-
+.designer-header, .designer-logo, .canvas-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0 30px;
-
-  border-bottom: 1px solid #e5e1da;
+  gap: 12px;
 }
 
-
-/*
-   LOGO STYLING IS NOT HERE.
-
-   Room Designer uses the exact same
-   .logo, .nestora-mark, .mark-left,
-   .mark-right and .logo-text classes
-   from Navbar.css.
-*/
-
-
-.designer-title {
-  font-family: Georgia, serif;
-
-  font-size: 22px;
-
-  margin: 0;
+.designer-header {
+  padding: 18px 25px;
+  background: white;
+  border-bottom: 1px solid #eee6df;
 }
 
+.designer-logo { justify-content: flex-start; }
+.nestora-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 32px;
+  height: 32px;
+  background: #302539;
+  border-radius: 5px;
+}
+.mark-left, .mark-right {
+  width: 7px;
+  height: 18px;
+  background: #d9b779;
+  border-radius: 2px;
+}
+.mark-right { height: 12px; background: #bba0d4; }
+.logo-text { font-size: 21px; font-weight: bold; color: #302539; }
+.designer-heading { text-align: center; }
+.designer-heading h1 { margin: 0; font-size: 23px; color: #302539; }
+.designer-heading p { margin-bottom: 0; color: #817783; font-size: 12px; }
 
-.save-button {
-  border: none;
-
-  background: #7654e8;
-
-  color: white;
-
-  padding: 11px 20px;
-
+.save-button, .furniture-card-content button {
+  padding: 10px 14px;
+  border: 0;
   border-radius: 8px;
-
+  background: #6242d6;
+  color: white;
   cursor: pointer;
 }
-
-
-/* ==============================
-   MAIN LAYOUT
-============================== */
 
 .designer-layout {
   display: grid;
-
-  grid-template-columns: 230px 1fr 280px;
-
-  min-height: calc(100vh - 70px);
+  grid-template-columns: 220px minmax(250px, 1fr) 300px;
+  gap: 18px;
+  padding: 20px;
+  align-items: start;
 }
 
-
-/* ==============================
-   LEFT PANEL
-============================== */
-
-.left-panel {
+.left-panel, .right-panel {
+  min-width: 0;
+  padding: 17px;
   background: white;
-
-  padding: 25px;
-
-  border-right: 1px solid #e5e1da;
+  border: 1px solid #eee7e1;
+  border-radius: 14px;
 }
 
-
-.left-panel h3,
-.right-panel h3 {
-  margin-top: 0;
-
-  font-family: Georgia, serif;
-
-  font-size: 21px;
-}
-
-
-/* ==============================
-   SETTINGS
-============================== */
-
-.setting-box {
-  margin-top: 30px;
-}
-
-
-.setting-box label {
+.left-panel h3, .right-panel h3 { margin-top: 0; color: #302539; }
+.left-panel label {
   display: block;
-
+  margin: 16px 0 7px;
   font-size: 13px;
-
-  font-weight: 700;
-
-  color: #555;
-
-  margin-bottom: 12px;
+  font-weight: bold;
 }
 
-
-/* ==============================
-   ROOM SIZE
-============================== */
-
-.room-size {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
+.left-panel select, .left-panel input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6ded8;
+  border-radius: 7px;
+  background: #fcfaf8;
 }
 
-
-.room-size input {
-  width: 45px;
-
-  padding: 8px;
-
-  border: 1px solid #ddd;
-
-  border-radius: 6px;
-}
-
-
-.room-size span {
-  font-size: 12px;
-
-  color: #777;
-}
-
-
-/* ==============================
-   COLORS
-============================== */
-
-.color-options {
-  display: flex;
-
-  gap: 8px;
-}
-
-
-.color {
-  width: 30px;
-
-  height: 30px;
-
+.color-options { display: flex; gap: 10px; flex-wrap: wrap; }
+.color-option {
+  width: 29px;
+  height: 29px;
+  border: 1px solid #d7d0ca;
   border-radius: 50%;
-
-  border: 2px solid #ddd;
-
   cursor: pointer;
 }
 
-
-.white {
-  background: white;
+.preference-card, .cost-card {
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid #e3d4ec;
+  border-radius: 12px;
+  background: #f8f1fb;
 }
+.preference-card h4 { margin: 5px 0 12px; color: #574066; }
+.preference-card p { font-size: 12px; overflow-wrap: anywhere; }
 
+.canvas-area { min-width: 0; }
+.canvas-header { margin-bottom: 15px; }
+.canvas-header h2 { margin: 0; font-size: 20px; color: #302539; }
 
-.beige {
-  background: #e8dcc8;
-}
-
-
-.grey {
-  background: #b9b9b9;
-}
-
-
-.blue {
-  background: #b8cde0;
-}
-
-
-.green {
-  background: #b8cdb8;
-}
-
-
-/* ==============================
-   FLOORING
-============================== */
-
-.setting-box select {
+.room-canvas {
+  position: relative;
   width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border: 10px solid var(--wall-color, #e8d6bd);
+  border-top-width: 24px;
+  background: var(--wall-color, #e8d6bd);
+  box-shadow: 0 5px 18px #3f2d2314;
+}
 
-  padding: 9px;
+.room-top-wall {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #6e5b4b;
+}
 
-  border: 1px solid #ddd;
+.room-floor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: none;
+  background-color: #d9b58d;
+}
 
-  border-radius: 6px;
+.floor-wood {
+  background-color: #d9b58d;
+  background-image: repeating-linear-gradient(0deg, transparent 0 34px, #78502b30 35px 37px);
+}
+.floor-marble {
+  background-color: #f0ece7;
+  background-image: linear-gradient(45deg, transparent 48%, #d9d0c8 49%, transparent 51%);
+  background-size: 100px 100px;
+}
+.floor-tiles {
+  background-color: #e8e0d6;
+  background-image: linear-gradient(#cfc1b3 1px, transparent 1px), linear-gradient(90deg, #cfc1b3 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.floor-carpet {
+  background-color: #d9c8df;
+  background-image: repeating-linear-gradient(45deg, transparent 0 5px, #ffffff18 5px 7px);
+}
 
+.placed-furniture {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 3px;
+  border: 2px solid #c4a46d;
+  border-radius: 7px;
+  background: #fffaf0;
+  box-shadow: 2px 3px 6px #30253925;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.placed-furniture img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.placed-furniture small {
+  color: #6242d6;
+  font-size: 10px;
+  pointer-events: none;
+}
+.selected-furniture { outline: 2px solid #6242d6; z-index: 5; }
+
+.placed-furniture .furniture-action,
+.placed-furniture .resize-handle {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #6242d6;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  touch-action: none;
+  pointer-events: auto;
+}
+
+.placed-furniture .rotate-action { top: -13px; left: -13px; }
+.placed-furniture .delete-action {
+  top: -13px;
+  right: -13px;
+  background: #e34d59;
+  font-size: 21px;
+}
+
+.placed-furniture .handle-tl { top: -13px; left: -13px; cursor: nwse-resize; }
+.placed-furniture .handle-tr { top: -13px; right: -13px; cursor: nesw-resize; }
+.placed-furniture .handle-bl { bottom: -13px; left: -13px; cursor: nesw-resize; }
+.placed-furniture .handle-br { bottom: -13px; right: -13px; cursor: nwse-resize; }
+
+.planner-tip { color: #6242d6; font-size: 12px; }
+
+.furniture-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.furniture-card {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid #eee5de;
+  border-radius: 10px;
   background: white;
 }
-
-
-/* ==============================
-   CENTER
-============================== */
-
-.canvas-area {
-  padding: 30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
+.furniture-card img {
+  width: 95px;
+  min-height: 100px;
+  object-fit: cover;
+  border-radius: 7px;
 }
+.furniture-card-content { min-width: 0; }
+.furniture-card-content h4 { margin: 4px 0 8px; font-size: 13px; }
+.furniture-card-content p { color: #6242d6; font-weight: bold; font-size: 12px; }
+.furniture-card-content button { padding: 8px; font-size: 11px; }
 
-
-.canvas-header {
-  width: 90%;
-
+.cost-card > p:first-child { color: #6242d6; font-size: 12px; }
+.cost-card h2 { color: #6242d6; font-size: 24px; }
+.budget-progress {
+  height: 7px;
+  overflow: hidden;
+  background: #e3d7e8;
+  border-radius: 20px;
+}
+.budget-progress div {
+  height: 100%;
+  background: #6242d6;
+  transition: width .3s;
+}
+.cart-item {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee7e1;
+}
+.cart-item-new img { width: 48px; height: 48px; object-fit: cover; border-radius: 6px; }
+.cart-details { flex: 1; min-width: 0; }
+.cart-details strong { font-size: 13px; }
+.cart-details p { color: #6242d6; font-size: 12px; }
+.quantity-controls { display: flex; align-items: center; gap: 10px; }
+.quantity-controls button {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #6242d6;
+  border-radius: 6px;
+  background: white;
+  color: #6242d6;
+  cursor: pointer;
+}
+.delete-button { border: 0; background: none; color: #e34d59; font-size: 22px; cursor: pointer; }
 
-  margin-bottom: 20px;
+@media (max-width: 1050px) {
+  .designer-layout { grid-template-columns: 200px minmax(0, 1fr); }
+  .right-panel { grid-column: 1 / -1; }
+  .furniture-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-
-.canvas-header h2 {
-  margin: 0;
-
-  font-family: Georgia, serif;
+@media (max-width: 650px) {
+  .designer-header { flex-wrap: wrap; padding: 15px; }
+  .designer-heading { order: 3; width: 100%; text-align: left; }
+  .designer-layout { display: flex; flex-direction: column; padding: 12px; }
+  .left-panel, .canvas-area, .right-panel { width: 100%; }
+  .room-canvas { min-height: 260px; }
+  .furniture-grid { grid-template-columns: 1fr; }
+}
+/* FURNITURE COLLECTION */
+.furniture-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 15px;
 }
 
+.furniture-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #fffaf3;
+  border: 1px solid #eadcc9;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(112, 69, 138, 0.08);
+  transition: 0.2s;
+}
 
-.canvas-header span {
-  color: #777;
+.furniture-card:hover {
+  border-color: #b99a63;
+  box-shadow: 0 5px 14px rgba(112, 69, 138, 0.15);
+  transform: translateY(-2px);
+}
 
+.furniture-card img {
+  width: 115px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.furniture-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.furniture-card-content h4 {
+  color: #382647;
+  margin: 5px 0 12px;
+  font-size: 15px;
+}
+
+.furniture-card-content p {
+  color: #70458a;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.furniture-card button {
+  background: #70458a;
+  color: white;
+  border: 1px solid #70458a;
+  border-radius: 9px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.furniture-card button:hover {
+  background: #563469;
+}
+
+/* MY SAVED DESIGNS */
+.saved-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 14px;
+  background: #fffaf3;
+  border: 1px solid #eadcc9;
+  border-left: 4px solid #b99a63;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(112, 69, 138, 0.07);
+}
+
+.saved-item > div {
+  flex: 1;
+  min-width: 100px;
+}
+
+.saved-item strong {
+  color: #563469;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.saved-item p {
+  color: #76677d;
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.saved-item button {
+  background: #70458a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.saved-item button:hover {
+  background: #563469;
+}
+
+.saved-item button:last-child {
+  background: #f5e8e6;
+  color: #9b4545;
+  padding: 8px 11px;
+}
+
+.saved-item button:last-child:hover {
+  background: #efd3d0;
+}
+
+/* SECTION HEADINGS */
+h4 {
+  color: #382647;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 600px) {
+  .furniture-card img {
+    width: 90px;
+    height: 115px;
+  }
+
+  .saved-item {
+    padding: 10px;
+  }
+}
+/* FURNITURE COLLECTION HEADER */
+.furniture-collection h2 {
+  color: #493052;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* BUDGET */
+.furniture-collection .budget {
+  background: #f7effb;
+  color: #70458a;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5d4ef;
+  margin-bottom: 12px;
   font-size: 14px;
 }
 
-
-/* ==============================
-   ROOM CANVAS
-============================== */
-
-.room-canvas {
-  width: 90%;
-
-  max-width: 850px;
-
-  height: 560px;
-
-  background: #c9a675;
-
-  padding: 20px;
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.15);
-
-  box-sizing: border-box;
+.furniture-collection .budget strong {
+  color: #563469;
 }
 
+/* SORT LABEL AND DROPDOWN */
+.furniture-collection label {
+  color: #594361;
+  font-size: 14px;
+  font-weight: 600;
+}
 
-.room-wall {
+.furniture-collection select {
+  background: #fffaf3;
+  color: #493052;
+  border: 1px solid #d8c3e4;
+  border-radius: 9px;
+  padding: 9px 12px;
+  margin: 8px 0 12px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
   width: 100%;
-
-  height: 100%;
-
-  background: #f4eee4;
-
-  border: 8px solid #ddd0bc;
-
-  box-sizing: border-box;
-
-  position: relative;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
 }
 
-
-.room-label {
-  color: #aaa;
-
-  font-family: Georgia, serif;
-
-  font-size: 28px;
+.furniture-collection select:focus {
+  border-color: #70458a;
+  box-shadow: 0 0 0 3px rgba(112, 69, 138, 0.12);
 }
 
-
-/* ==============================
-   RIGHT PANEL
-============================== */
-
-.right-panel {
-  background: white;
-
-  padding: 25px;
-
-  border-left: 1px solid #e5e1da;
-}
-
-
-.panel-description {
-  color: #777;
-
+/* AVAILABLE ITEMS */
+.furniture-collection .item-count {
+  color: #887493;
   font-size: 13px;
+  margin: 5px 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eadcc9;
 }
 
-
-/* ==============================
-   RESPONSIVE
-============================== */
-
-@media (max-width: 1000px) {
-
-  .designer-layout {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .right-panel {
-    display: none;
-  }
-
+/* SAVE DESIGN POPUP */
+.save-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: rgba(48, 37, 57, 0.45);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.25s ease;
 }
 
+.save-modal {
+  width: 350px;
+  max-width: 100%;
+  padding: 28px;
+  background: #fffaf3;
+  border: 1px solid #eadcc9;
+  border-radius: 18px;
+  box-shadow: 0 15px 45px #30253930;
+  animation: popIn 0.3s ease;
+}
 
-@media (max-width: 700px) {
+.save-modal h2 {
+  margin: 0 0 10px;
+  color: #493052;
+  font-size: 23px;
+}
 
-  .designer-layout {
-    grid-template-columns: 1fr;
+.save-modal p {
+  margin: 0 0 18px;
+  color: #817783;
+  font-size: 14px;
+}
+
+.save-modal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #dfcde8;
+  border-radius: 9px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.save-modal input:focus {
+  border-color: #70458a;
+  box-shadow: 0 0 0 3px #70458a20;
+}
+
+.save-modal button {
+  padding: 10px 14px;
+  margin-right: 7px;
+  border: none;
+  border-radius: 9px;
+  background: #70458a;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-modal button:hover {
+  background: #563469;
+  transform: translateY(-1px);
+}
+
+.save-modal button:last-child {
+  background: #eee5f2;
+  color: #563469;
+}
+
+.save-modal button:last-child:hover {
+  background: #dfcde8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
   }
-
-  .left-panel {
-    border-right: none;
-
-    border-bottom: 1px solid #ddd;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-
-  .room-canvas {
-    width: 100%;
-
-    height: 450px;
-  }
-
 }
