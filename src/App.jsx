@@ -3,12 +3,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation
+  useLocation,
+  Navigate
 } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
 
-import HeroSection from "./Components/HeroSection/HeroSection";
+import HeroSection from "./components/HeroSection/HeroSection";
 import Stats from "./Components/Stats/Stats";
 import Features from "./Components/Features/Features";
 import RoomCategories from "./Components/RoomCategories/RoomCategories";
@@ -26,10 +27,10 @@ import RoomSetup from "./Components/RoomSetup/RoomSetup";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import Explore from "./Components/Explore/Explore";
+import { PreferencesProvider} from "./PreferencesContext";
 
-
+import { DesignsProvider } from "./DesignsContext";
 // HOME PAGE
-
 
 function HomePage() {
   return (
@@ -69,10 +70,11 @@ function AppLayout() {
     location.pathname === "/room-designer";
 
 
-  
+
   // AUTOMATIC PREMIUM POPUP
   // ONLY ON HOME PAGE
- 
+  
+
   useEffect(() => {
 
     // Do not show automatic popup
@@ -105,7 +107,7 @@ function AppLayout() {
   }, [location.pathname]);
 
 
-  
+
   // OPEN PREMIUM POPUP
 
 
@@ -114,7 +116,7 @@ function AppLayout() {
   };
 
 
-
+  
   // CLOSE PREMIUM POPUP
   
 
@@ -136,23 +138,25 @@ function AppLayout() {
 
       {/* 
           PAGE ROUTES
-      */}
+       */}
 
       <Routes>
 
-        {/*
+        {/* 
             HOME
-     */}
+        */}
 
         <Route
           path="/"
           element={<HomePage />}
         />
 
+        
 
-        {/* 
+
+        {/*
             GALLERY
-         */}
+       */}
 
         <Route
           path="/gallery"
@@ -162,7 +166,7 @@ function AppLayout() {
 
         {/* 
             PREFERENCES
-        */}
+         */}
 
         <Route
           path="/preferences"
@@ -172,7 +176,7 @@ function AppLayout() {
 
         {/* 
             ROOM DESIGNER
-        */}
+         */}
 
         <Route
           path="/room-designer"
@@ -200,7 +204,7 @@ function AppLayout() {
         />
 
 
-        {/*
+        {/* 
             CONTACT
         */}
 
@@ -212,13 +216,15 @@ function AppLayout() {
 
         {/*
             FEATURES
-        */}
+         */}
 
         <Route
   path="/features"
   element={<Features />}
 />
 <Route path="/explore/:roomName" element={<Explore/>}/>
+
+<Route path="*" element={<Navigate to="/" replace />} />
         
 
       </Routes>
@@ -227,12 +233,12 @@ function AppLayout() {
       {/* 
           FOOTER
           Hidden only on Room Designer
-      */}
+       */}
 
       {!isDesignerPage && <Footer />}
 
 
-      {/* 
+      {/*
           PREMIUM POPUP
        */}
 
@@ -246,16 +252,21 @@ function AppLayout() {
 }
 
 
-
+// ========================================
 // APP
-
+// ========================================
 
 function App() {
 
   return (
     <Router>
 
-      <AppLayout />
+      <PreferencesProvider>
+        <AppLayout />
+      </PreferencesProvider>
+
+      
+      
 
     </Router>
   );

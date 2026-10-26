@@ -1,27 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { PreferencesContext } from "../../PreferencesContext";
 import "./Preferences.css";
 
 function Preferences() {
-
   const navigate = useNavigate();
-  const [preferences, setPreferences] = useState({
-    room: "Bedroom",
-    style: "Modern Luxury",
-    color: "Warm",
-    budget: "₹1L - ₹3L"
-  });
+
+  const {
+    preferences,
+    setPreferences,
+    savePreferences
+  } = useContext(PreferencesContext);
 
   const [saved, setSaved] = useState(false);
 
-  useEffect(() => {
-    const savedPreferences = localStorage.getItem("nestoraPreferences");
-
-    if (savedPreferences) {
-      setPreferences(JSON.parse(savedPreferences));
-    }
-  }, []);
-
+  // Handle selecting an option
   const handleSelect = (category, value) => {
     setPreferences({
       ...preferences,
@@ -31,25 +24,24 @@ function Preferences() {
     setSaved(false);
   };
 
-  const savePreferences = () => {
-    localStorage.setItem(
-      "nestoraPreferences",
-      JSON.stringify(preferences)
-    );
+  // Save preferences and open Gallery
+  const handleSave = () => {
+  savePreferences(preferences);
+  setSaved(true);
+  navigate("/gallery");
+};
 
-    setSaved(true);
-    navigate("/gallery");
-  };
+  // Clear preferences
   const clearPreferences = () => {
-    localStorage.removeItem("nestoraPreferences");
-
-    setPreferences({
+    const emptyPreferences = {
       room: "",
       style: "",
       color: "",
       budget: ""
-    });
+    };
 
+    setPreferences(emptyPreferences);
+    savePreferences(emptyPreferences);
     setSaved(false);
   };
 
@@ -57,9 +49,7 @@ function Preferences() {
     <div className="preferences-page">
 
       {/* HEADER */}
-
       <section className="preferences-header">
-
         <div className="preferences-heading">
 
           <p className="preferences-overline">
@@ -76,37 +66,25 @@ function Preferences() {
           </p>
 
         </div>
-
       </section>
 
-
       {/* PREFERENCES CARD */}
-
       <section className="preferences-section">
-
         <div className="preferences-card">
 
-
           {/* ROOM */}
-
           <div className="preference-group">
 
             <div className="preference-title">
-
-              <span className="preference-number">
-                01
-              </span>
+              <span className="preference-number">01</span>
 
               <div>
                 <h2>What are you designing?</h2>
                 <p>Choose the room you want to work on.</p>
               </div>
-
             </div>
 
-
             <div className="preference-options">
-
               {[
                 "Living Room",
                 "Bedroom",
@@ -115,7 +93,6 @@ function Preferences() {
                 "Bathroom",
                 "Dining Room"
               ].map((item) => (
-
                 <button
                   key={item}
                   className={
@@ -128,52 +105,37 @@ function Preferences() {
                   {item}
 
                   {preferences.room === item && (
-                    <span className="check">
-                      ✓
-                    </span>
+                    <span className="check">✓</span>
                   )}
-
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
           <div className="preference-divider"></div>
 
-
           {/* STYLE */}
-
           <div className="preference-group">
 
             <div className="preference-title">
-
-              <span className="preference-number">
-                02
-              </span>
+              <span className="preference-number">02</span>
 
               <div>
                 <h2>What style speaks to you?</h2>
                 <p>Pick the look you naturally gravitate towards.</p>
               </div>
-
             </div>
 
-
             <div className="preference-options">
-
               {[
                 "Modern Luxury",
                 "Warm Minimalism",
                 "Scandinavian",
-                "Boho Chic",
-                "Traditional",
-                "Contemporary"
+                "Boho Chic"
+                
+                
               ].map((item) => (
-
                 <button
                   key={item}
                   className={
@@ -186,43 +148,29 @@ function Preferences() {
                   {item}
 
                   {preferences.style === item && (
-                    <span className="check">
-                      ✓
-                    </span>
+                    <span className="check">✓</span>
                   )}
-
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
           <div className="preference-divider"></div>
 
-
           {/* COLOR */}
-
           <div className="preference-group">
 
             <div className="preference-title">
-
-              <span className="preference-number">
-                03
-              </span>
+              <span className="preference-number">03</span>
 
               <div>
                 <h2>Which colours feel right?</h2>
                 <p>Choose the overall mood for your space.</p>
               </div>
-
             </div>
 
-
             <div className="preference-options">
-
               {[
                 "Neutral",
                 "Warm",
@@ -231,7 +179,6 @@ function Preferences() {
                 "Dark",
                 "Bright"
               ].map((item) => (
-
                 <button
                   key={item}
                   className={
@@ -244,43 +191,29 @@ function Preferences() {
                   {item}
 
                   {preferences.color === item && (
-                    <span className="check">
-                      ✓
-                    </span>
+                    <span className="check">✓</span>
                   )}
-
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
           <div className="preference-divider"></div>
 
-
           {/* BUDGET */}
-
           <div className="preference-group">
 
             <div className="preference-title">
-
-              <span className="preference-number">
-                04
-              </span>
+              <span className="preference-number">04</span>
 
               <div>
                 <h2>What's your budget?</h2>
                 <p>This helps us suggest practical design ideas.</p>
               </div>
-
             </div>
 
-
             <div className="preference-options">
-
               {[
                 "Under ₹50K",
                 "₹50K - ₹1L",
@@ -288,7 +221,6 @@ function Preferences() {
                 "₹3L - ₹5L",
                 "₹5L+"
               ].map((item) => (
-
                 <button
                   key={item}
                   className={
@@ -301,22 +233,15 @@ function Preferences() {
                   {item}
 
                   {preferences.budget === item && (
-                    <span className="check">
-                      ✓
-                    </span>
+                    <span className="check">✓</span>
                   )}
-
                 </button>
-
               ))}
-
             </div>
 
           </div>
 
-
-          
-
+          {/* SAVE AREA */}
           <div className="preferences-save-area">
 
             <div className="preferences-note">
@@ -339,9 +264,11 @@ function Preferences() {
 
               <button
                 className="save-preferences"
-                onClick={savePreferences}
+                onClick={handleSave}
               >
-                {saved ? "Preferences Saved ✓" : "Save Preferences →"}
+                {saved
+                  ? "Preferences Saved ✓"
+                  : "Save Preferences →"}
               </button>
 
             </div>
@@ -349,7 +276,6 @@ function Preferences() {
           </div>
 
         </div>
-
       </section>
 
     </div>
