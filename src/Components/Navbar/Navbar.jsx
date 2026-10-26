@@ -47,9 +47,7 @@ function Navbar() {
                     Contact
                 </Link>
 
-                <Link to="/dashboard">
-                    Dashboard
-                </Link>
+                
 
             </div>
 
