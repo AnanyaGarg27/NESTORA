@@ -7,32 +7,32 @@ function RoomCategories() {
     {
       name: "Living Room",
       image:
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsP0vs_3TC4PmoI_XWyo9l1EUHN9tAZgF8H2OiVDjmbA&s=10"
     },
     {
       name: "Bedroom",
       image:
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThjpUb0H_OHUjMtV6rUqoyZhYLUNkwDwFXwaem6Lbisw&s=10"
     },
     {
       name: "Kitchen",
       image:
-        "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvpYukEZhvD-3lsKqbec_z-RjQKTGH1bo2VTYZkBCuag&s=10"
     },
     {
       name: "Dining Room",
       image:
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKv36B6VG0zARDrYrkzo1G_2z9TkKD03AfDSNAhu5tsg&s=10"
     },
     {
       name: "Home Office",
       image:
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtgZ_t0v8xZYvDbR3dxvRYgJ05tq3_KeY3BSXsSXitQ&s=10"
     },
     {
       name: "Bathroom",
       image:
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6RR8Ie1o0zAFOiLp0iz-iomfeqLNSOpfcQEEAdmy8bA&s=10"
     }
   ];
 
@@ -69,7 +69,15 @@ function RoomCategories() {
               alt={room.name}
             />
 
-            
+            {/* <div className="room-overlay">
+
+              <h3>{room.name}</h3>
+
+              <span>
+                Explore →
+              </span>
+
+            </div> */}
             <div className="room-overlay">
 
               <h3>{room.name}</h3>
